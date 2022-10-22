@@ -1,0 +1,10 @@
+{
+"lastname":"Smith",
+"name":"John",
+"age": 21,
+"subjects":[
+"math",
+"chemistry",
+"biology"],
+"avgmark": 4.7
+}
