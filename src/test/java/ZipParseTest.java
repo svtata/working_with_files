@@ -16,7 +16,7 @@ public class ZipParseTest {
     ClassLoader classLoader = ZipParseTest.class.getClassLoader();
 
     @Test
-    void ZipReadPDF() throws Exception {
+    void zipReadPDF() throws Exception {
         ZipFile zip = new ZipFile(Objects.requireNonNull(classLoader.getResource("Desktop.zip")).getFile());
         ZipEntry entry = zip.getEntry("Document.pdf");
         try (InputStream inputStream = zip.getInputStream(entry)) {
@@ -27,7 +27,7 @@ public class ZipParseTest {
 
 
     @Test
-    void ZipReadXSL() throws Exception {
+    void zipReadXSL() throws Exception {
         ZipFile zip = new ZipFile(Objects.requireNonNull(classLoader.getResource("Desktop.zip")).getFile());
         ZipEntry entry = zip.getEntry("Books.xlsx");
         try (InputStream inputStream = zip.getInputStream(entry)) {
@@ -40,7 +40,7 @@ public class ZipParseTest {
     }
 
     @Test
-    void ZipReadCSV() throws Exception {
+    void zipReadCSV() throws Exception {
         ZipFile zip = new ZipFile(Objects.requireNonNull(classLoader.getResource("Desktop.zip")).getFile());
         ZipEntry entry = zip.getEntry("Numbers.csv");
         try (InputStream is = zip.getInputStream(entry)) {
